@@ -1,3 +1,4 @@
+package CodePTIT_Java;
 import java.util.Scanner;
 
 public class J01021 {
