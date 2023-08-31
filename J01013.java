@@ -1,5 +1,4 @@
 package CodePTIT_Java;
-
 import java.util.*;
 
 public class J01013 {
@@ -7,7 +6,7 @@ public class J01013 {
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
 
-        List<Integer> primes = sieveOfEratosthenes(2000000);
+        List<Integer> primes = sieveOfEratosthenes(2_000_000);
 
         long totalSum = 0;
 
