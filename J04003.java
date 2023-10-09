@@ -2,13 +2,13 @@ package CodePTIT_Java;
 import java.util.*;
 import java.lang.Math;
 import CodePTIT_Java.J04003;
-class Phanso{
+class Phanso1{
     private long tuso;
     private long mauso;
-    public Phanso(){
+    public Phanso1(){
 
     }
-    public Phanso(long tuso,long mauso){
+    public Phanso1(long tuso,long mauso){
         this.tuso = tuso;
         this.mauso = mauso;
     }
