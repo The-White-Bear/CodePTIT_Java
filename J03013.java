@@ -1,4 +1,4 @@
-
+package CodePTIT_Java;
 import java.math.BigInteger;
 import java.util.Scanner;
 
