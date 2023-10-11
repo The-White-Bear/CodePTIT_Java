@@ -4,7 +4,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
 
-public class SinhVien {
+class SinhVien {
     private String maSV;
     private String hoTen;
     private String lop;
