@@ -1,4 +1,6 @@
 package CodePTIT_Java;
+import java.io.File;
+import java.io.IOException;
 import java.util.Scanner;
 import java.util.Arrays;
 
@@ -41,7 +43,24 @@ class IntSet {
         }
         return result;
     }
-
+    public IntSet intersection(IntSet otherSet){
+        IntSet result = new IntSet(new int[]{});
+        for (int i = 0; i < this.size; i++) {
+            if (otherSet.contains(this.set[i])){
+                result.insert(this.set[i]);
+            }
+        }
+        return result;
+    }
+    public IntSet difference(IntSet otherSet){
+        IntSet result = new IntSet(new int[]{});
+        for (int i = 0; i < this.size; i++) {
+            if (!otherSet.contains(this.set[i])){
+                result.insert(this.set[i]);
+            }
+        }
+        return result;
+    }
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
@@ -54,25 +73,17 @@ class IntSet {
         return sb.toString();
     }
 }
-public class J07019 {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        int m = sc.nextInt();
-        int[] a = new int[n];
-        int[] b = new int[m];
-
-        for (int i = 0; i < n; i++) {
-            a[i] = sc.nextInt();
-        }
-
-        for (int i = 0; i < m; i++) {
-            b[i] = sc.nextInt();
-        }
-
+public class J07020{
+    public static void main(String[] args) throws IOException {
+        Scanner sc = new Scanner(new File("DATA.in"));
+        int n = sc.nextInt(), m = sc.nextInt(), a[] = new int[n], b[] = new int[m];
+        for(int i = 0; i<n; i++) a[i] = sc.nextInt();
+        for(int i = 0; i<m; i++) b[i] = sc.nextInt();
         IntSet s1 = new IntSet(a);
         IntSet s2 = new IntSet(b);
-        IntSet s3 = s1.union(s2);
+        IntSet s3 = s1.intersection(s2);
         System.out.println(s3);
     }
-}
+
+    }
+

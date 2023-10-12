@@ -3,19 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-class Pair<T,U> {
-    T first;
-    U second;
-
-    public Pair(T first, U second) {
-        this.first = first;
-        this.second = second;
-    }
-    @Override
-    public String toString() {
-        return "("+ first + "," + second + ")";
-    }
-}
+import CodePTIT_Java.Pair;
 public class J07018 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
