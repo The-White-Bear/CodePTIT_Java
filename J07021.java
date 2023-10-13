@@ -1,32 +1,30 @@
 package CodePTIT_Java;
-import java.util.*;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
 public class J07021 {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int T = scanner.nextInt();
-        scanner.nextLine(); // Đọc dòng xuống kết thúc
-
-        for (int t = 0; t < T; t++) {
-            String expression = scanner.nextLine();
-            Stack<Integer> stack = new Stack<>();
-            int count = 1;
-
-            // Duyệt qua từng ký tự trong biểu thức
-            for (int i = 0; i < expression.length(); i++) {
-                char c = expression.charAt(i);
-
-                if (c == '(') {
-                    stack.push(count);
-                    System.out.print(count + " ");
-                    count++;
-                } else if (c == ')') {
-                    System.out.print(stack.pop() + " ");
-                }
+    public static String normalize(String s) {
+        return s.substring(0,1) .toUpperCase()+s.substring(1).toLowerCase();
+    }
+    public static void main(String[] args) throws FileNotFoundException {
+        Scanner sc=new Scanner(new File("DATA.in"));
+        while (true)
+        {
+            String line=sc.nextLine();
+            if (line.equals("END"))
+            {
+                break;
             }
-
-            System.out.println();
+            String[] words=line.trim().split("\\s+");
+            String res="";
+            for (String word:words)
+            {
+                res+=normalize(word)+" ";
+            }
+            System.out.println(res);
         }
 
-        scanner.close();
     }
 }
