@@ -12,13 +12,13 @@ import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
 
-class Customer implements Comparable<Customer> {
+class Customer1 implements Comparable<Customer1> {
 
     public static int NUM_ID = 1;
     private String id, name, roomId;
     private int timeByDay, price, totalCost;
 
-    public Customer(String name, String roomId, Date checkInDate, Date checkOutDate, int serviceFee) {
+    public Customer1(String name, String roomId, Date checkInDate, Date checkOutDate, int serviceFee) {
         this.id = String.format("KH%02d", NUM_ID++);
         this.name = normalizeName(name);
         this.roomId = roomId;
@@ -68,7 +68,7 @@ class Customer implements Comparable<Customer> {
     }
 
     @Override
-    public int compareTo(Customer other) {
+    public int compareTo(Customer1 other) {
         return -(this.getTotalCost().compareTo(other.getTotalCost()));
     }
 }
@@ -80,19 +80,19 @@ public class J07051{
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
         int n = Integer.parseInt(sc.nextLine());
-        List<Customer> customers = new ArrayList<>();
+        List<Customer1> customers = new ArrayList<>();
         while (n-- > 0) {
             String name = sc.nextLine().trim();
             String roomId = sc.nextLine().trim();
             Date checkInDate = sdf.parse(sc.nextLine());
             Date checkOutDate = sdf.parse(sc.nextLine());
             int serviceFee = Integer.parseInt(sc.nextLine());
-            Customer customer = new Customer(name, roomId, checkInDate, checkOutDate, serviceFee);
+            Customer1 customer = new Customer1(name, roomId, checkInDate, checkOutDate, serviceFee);
             customers.add(customer);
         }
 
         Collections.sort(customers);
-        for (Customer customer : customers) {
+        for (Customer1 customer : customers) {
             System.out.println(customer);
         }
     }
