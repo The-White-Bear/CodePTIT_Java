@@ -3,11 +3,11 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
 
-class Pair<T,U> {
+class Pair1<T,U> {
     T first;
     U second;
 
-    public Pair(T first, U second) {
+    public Pair1(T first, U second) {
         this.first = first;
         this.second = second;
     }
@@ -50,7 +50,7 @@ public class J04020 {
             int n = sc.nextInt();
             boolean check = false;
             for(int i = 2; i <= 2*Math.sqrt(n); i++){
-                Pair<Integer, Integer> p = new Pair<>(i, n-i);
+                Pair1<Integer, Integer> p = new Pair1<>(i, n-i);
                 if(p.isPrime()){
                     System.out.println(p);
                     check = true;
