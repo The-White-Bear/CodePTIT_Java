@@ -4,14 +4,14 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.Scanner;
 
-class Student {
+class Student4 {
 
     private String id;
     private String name;
     private String className;
     private String email;
 
-    public Student(String id, String name, String className, String email) {
+    public Student4(String id, String name, String className, String email) {
         this.id = id;
         this.name = name;
         this.className = className;
@@ -45,15 +45,15 @@ public class J05021{
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        ArrayList<Student> arrayList = new ArrayList<>();
+        ArrayList<Student4> arrayList = new ArrayList<>();
 
         while (scanner.hasNext()) {
-            arrayList.add(new Student(scanner.nextLine(), scanner.nextLine(), scanner.nextLine(), scanner.nextLine()));
+            arrayList.add(new Student4(scanner.nextLine(), scanner.nextLine(), scanner.nextLine(), scanner.nextLine()));
         }
 
-        Collections.sort(arrayList, new Comparator<Student>() {
+        Collections.sort(arrayList, new Comparator<Student4>() {
             @Override
-            public int compare(Student o1, Student o2) {
+            public int compare(Student4 o1, Student4 o2) {
                 return o1.getId().compareTo(o2.getId());
             }
         });
