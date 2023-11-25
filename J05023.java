@@ -2,14 +2,14 @@ package CodePTIT_Java;
 import java.util.Scanner;
 import java.util.ArrayList;
 
-class Student5 {
+class Student6 {
 
     private String id;
     private String name;
     private String className;
     private String email;
 
-    public Student5(String id, String name, String className, String email) {
+    public Student6(String id, String name, String className, String email) {
         this.id = id;
         this.name = name;
         this.className = className;
@@ -42,7 +42,7 @@ class Student5 {
     }
 }
 
-public class J05022{
+public class J05023{
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -58,9 +58,9 @@ public class J05022{
         int Q = scanner.nextInt();
         while (Q-- > 0) {
             String className = scanner.next();
-            System.out.println("DANH SACH SINH VIEN LOP " + className + ":");
+            System.out.println("DANH SACH SINH VIEN KHOA " + className + ":");
             for (int i = 0; i < arrayList.size(); i++) {
-                if (className.equals(arrayList.get(i).getClassName())) {
+                if (className.substring(2).equals(arrayList.get(i).getClassName().substring(1, 3))) {
                     System.out.println(arrayList.get(i));
                 }
             }
