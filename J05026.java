@@ -1,7 +1,5 @@
 package CodePTIT_Java;
-import java.security.PublicKey;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
@@ -34,19 +32,18 @@ public class J05026 {
         Scanner sc=new Scanner(System.in);
         int n=sc.nextInt();
         sc.nextLine();
-        List<GiangVien1> list=new ArrayList<>();
+        List<GiangVien2> list=new ArrayList<>();
         for(int i=0;i<n;i++){
             String name=sc.nextLine();
             String subject=sc.nextLine();
-            list.add(new GiangVien1(name,subject));
+            list.add(new GiangVien2(name,subject));
         }
         int q=sc.nextInt();
         sc.nextLine();
         while (q-->0){
             String subject=sc.nextLine();
             subject=normalizeSubject(subject);
-            System.out.println("DANH SACH GIANG VIEN BO MON "+subject+":");
-            for(GiangVien1 x:list){
+            for(GiangVien2 x:list){
                 if(x.normalizeSubject(x.subject).equals(x.normalizeSubject(subject))){
                     System.out.println(x);
                 }
