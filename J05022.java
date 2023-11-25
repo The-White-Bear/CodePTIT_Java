@@ -47,12 +47,12 @@ public class J05022{
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        ArrayList<Student6> arrayList = new ArrayList<>();
+        ArrayList<Student5> arrayList = new ArrayList<>();
 
         int t = scanner.nextInt();
         scanner.nextLine();
         for (int i = 0; i < t; i++) {
-            arrayList.add(new Student6(scanner.nextLine(), scanner.nextLine(), scanner.nextLine(), scanner.nextLine()));
+            arrayList.add(new Student5(scanner.nextLine(), scanner.nextLine(), scanner.nextLine(), scanner.nextLine()));
         }
 
         int Q = scanner.nextInt();
